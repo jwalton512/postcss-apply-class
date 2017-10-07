@@ -11,8 +11,11 @@ Using this input.css:
 .bold {
     font-weight: bold;
 }
+.text-small {
+    font-size: .75rem;
+}
 .foo {
-    @apply .bold
+    @apply .bold, .text-small;
 }
 ```
 
@@ -21,8 +24,12 @@ you will get:
 .bold {
     font-weight: bold;
 }
+.text-small {
+    font-size: .75rem;
+}
 .foo {
     font-weight: bold;
+    font-size: .75rem;
 }
 ```
 
