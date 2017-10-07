@@ -40,8 +40,11 @@ it('applies comma-separated classes', () => {
         .bold {
             font-weight: bold;
         }
+        .small {
+            font-size: .75rem;
+        }
         .element {
-            @apply .colors, .bold;
+            @apply .colors, .bold, .small;
         }
     `;
 
@@ -52,9 +55,13 @@ it('applies comma-separated classes', () => {
         .bold {
             font-weight: bold;
         }
+        .small {
+            font-size: .75rem;
+        }
         .element {
             color: white;
             font-weight: bold;
+            font-size: .75rem;
         }
     `;
 
