@@ -1,0 +1,33 @@
+{
+  "name": "postcss-apply-class",
+  "version": "0.0.0",
+  "description": "PostCSS plugin to apply CSS classes in a similar fashion to LESS",
+  "keywords": [
+    "postcss",
+    "css"
+  ],
+  "author": "Jason Walton <jwalton512@gmail.com>",
+  "license": "MIT",
+  "repository": "jwalton512/postcss-apply-class",
+  "bugs": {
+    "url": "https://github.com/jwalton512/postcss-apply-class/issues"
+  },
+  "homepage": "https://github.com/jwalton512/postcss-apply-class",
+  "dependencies": {
+    "postcss": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-postcss": "^2.0.2",
+    "jest": "^20.0.0"
+  },
+  "scripts": {
+    "test": "jest && eslint *.js"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-postcss/es5",
+    "env": {
+      "jest": true
+    }
+  }
+}
