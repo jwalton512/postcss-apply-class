@@ -6,6 +6,7 @@
 [ci-img]:  https://travis-ci.org/jwalton512/postcss-apply-class.svg
 [ci]:      https://travis-ci.org/jwalton512/postcss-apply-class
 
+Using this input.css:
 ```css
 .bold {
     font-weight: bold;
@@ -15,7 +16,11 @@
 }
 ```
 
+you will get:
 ```css
+.bold {
+    font-weight: bold;
+}
 .foo {
     font-weight: bold;
 }
