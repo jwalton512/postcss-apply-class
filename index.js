@@ -8,14 +8,16 @@ module.exports = postcss.plugin('postcss-apply-class', function () {
                 root.walkRules(rootRule => {
                     const applyClasses = utils.stringToList(apply.params);
                     applyClasses.forEach(applyClass => {
-                        if (rootRule.selectors.includes(applyClass)) {
-                            rootRule.walkDecls(decl => {
-                                rule.append({
-                                    prop: decl.prop,
-                                    value: decl.value
+                        rootRule.selectors.forEach(selector => {
+                            if (selector === applyClass) {
+                                rootRule.walkDecls(decl => {
+                                    rule.append({
+                                        prop: decl.prop,
+                                        value: decl.value
+                                    });
                                 });
-                            });
-                        }
+                            }
+                        });
                     });
                 });
 
