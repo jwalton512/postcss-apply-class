@@ -1,6 +1,6 @@
 {
   "name": "postcss-apply-class",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "PostCSS plugin to apply CSS classes in a similar fashion to LESS",
   "keywords": [
     "postcss",
