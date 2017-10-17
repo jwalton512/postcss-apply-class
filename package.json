@@ -17,17 +17,29 @@
     "postcss": "^6.0.1"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
     "eslint": "^3.19.0",
     "eslint-config-postcss": "^2.0.2",
-    "jest": "^20.0.0"
+    "jest": "^20.0.0",
+    "npm-run-all": "^4.1.1"
   },
+  "main": "lib/index.js",
   "scripts": {
-    "test": "jest && eslint *.js"
+    "lint": "eslint src/ test/",
+    "test": "jest",
+    "clean": "rm -rf lib/",
+    "build:js": "babel src -d lib",
+    "build": "run-s clean build:*",
+    "prepublish": "run-s lint test build"
   },
   "eslintConfig": {
     "extends": "eslint-config-postcss/es5",
     "env": {
       "jest": true
     }
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }

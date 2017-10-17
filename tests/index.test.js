@@ -1,6 +1,5 @@
-var postcss = require('postcss');
-
-var plugin = require('./');
+import postcss from 'postcss'
+import plugin from '../src'
 
 function run(input, output, opts) {
     return postcss([ plugin(opts) ]).process(input)
